@@ -7,3 +7,5 @@ Technology which I used to create this project
 - SASS
 - js
 - git
+
+[MyFirstSite] (git config --global credential.helper store)
