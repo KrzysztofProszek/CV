@@ -83,3 +83,54 @@
         }
     }
 }
+
+.timeline {
+    .item {
+        display: flex;
+
+        .date {
+            flex: 0 0 100px;
+            text-align: right;
+        }
+
+        .bar {
+            flex: 0 0 60px;
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 1px;
+                background-color: $progressBarBgColor;
+                position: absolute;
+                inset: 0 0 0 50%;
+                transform: -50% 0;
+
+            }
+
+            .dot {
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+                background-color: $dotBgColor;
+                position: relative;
+                z-index: 1;
+                margin: 10px auto 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    background-color: $dotPrimeColor;
+                    border: 2px solid $progressBarColor;
+
+                }
+            }
+
+        }
+    }
+}
