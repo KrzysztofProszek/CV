@@ -8,4 +8,4 @@ Technology which I used to create this project
 - js
 - git
 
-[MyFirstSite] (git config --global credential.helper store)
+[MyFirstSite] (https://krzysztofproszek.github.io/CV/)
