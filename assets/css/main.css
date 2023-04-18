@@ -412,7 +412,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -15px;
+  margin: 0 -15px 15px 0;
 }
 .statsBanner .stats-item {
   width: 33.3333333333%;
@@ -487,4 +487,38 @@ body {
   display: block;
   border-radius: 50% 0% 50% 50%;
   translate: 40px -30px;
+}
+
+.design-skills .skill {
+  margin: 0 0 15px 0;
+}
+.design-skills .skill .skill-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 10px 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.design-skills .skill .skill-top .name {
+  color: #000;
+  font-size: 14px;
+}
+.design-skills .skill .skill-top .percent {
+  color: #9baab3;
+  font-size: 14px;
+}
+.design-skills .skill .skill-bottom .progress {
+  border-radius: 4px;
+  background-color: #ebeef2;
+  height: 6px;
+}
+.design-skills .skill .skill-bottom .progress .bar {
+  display: block;
+  height: 100%;
+  background-color: #56b887;
+  border-radius: 4px;
 }
