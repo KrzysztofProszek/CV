@@ -1,0 +1,201 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #d4d4d4;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #d4d4d400;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 50px;
+}
+
+body {
+    font-family: $mainFont;
+    background-image: url('../img/main_bg_3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center bottom;
+
+
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    padding: 80px 100px;
+    width: 100%;
+    max-width: 1660px;
+    margin: 0 auto;
+
+    .header {
+        width: 25%;
+        height: 100%;
+        background-color: $backgroundColorHeader;
+        padding: 40px;
+        text-align: center;
+        overflow: auto;
+
+        .photo {
+            text-align: center;
+            margin: 0 auto 30px auto;
+            position: relative;
+            width: 100%;
+            max-width: 130px;
+            height: 130px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                max-width: 130px;
+                border-radius: 50%;
+                opacity: 0.3;
+                background-color: $headerDefaultTextColor;
+                border: 2px solid $headerDefaultTextColor;
+                position: absolute;
+                inset: 3px auto auto 3px;
+                z-index: -1;
+                aspect-ratio: 1;
+            }
+
+
+            img {
+
+                display: block;
+                width: 100%;
+                border-radius: 50%;
+                border: 2px solid $headerDefaultTextColor;
+                z-index: 10;
+
+
+            }
+
+            .content {
+                width: 75%;
+                height: 100%;
+            }
+        }
+
+        .name {
+            color: $headerDefaultTextColor;
+            @include fluid-type(320px, 1290px, 22px, 30px);
+            margin: 0 0 7px 0;
+        }
+
+        .occupation {
+            color: $headerDefaultTextColor;
+            font-weight: 300;
+            font-size: 16px;
+            margin: 0 0 7px 0;
+        }
+
+        .socials {
+            background-color: $headersIconBgColor;
+            border-radius: 25px;
+            padding: 6px 15px;
+            display: inline-flex;
+            gap: 20px;
+
+            i {
+                color: $headerDefaultTextColor;
+            }
+        }
+
+        .phone {
+            a {
+                text-decoration: none;
+                color: $headerDefaultTextColor;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+
+        .email {
+            a {
+                text-decoration: none;
+                color: $headerDefaultTextColor;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .content {
+        width: 75%;
+        height: 100%;
+        position: relative;
+
+        .section {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $defaultSectiongBgColor;
+            overflow: auto;
+
+
+        }
+    }
+}
+
+.statsBanner {
+    display: flex;
+    margin: 0 -15px;
+
+    .stats-item {
+        width: calc(100%/3);
+        padding: 0 15px;
+
+        .stats-outline {
+            box-shadow: 0 1px 5px rgb(0 0 0/15%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+
+            i {
+                position: absolute;
+                font-size: 78px;
+                inset: 50% auto auto 0;
+                translate: -40% -50%;
+                z-index: 2;
+                color: $secondaryTextColor;
+                opacity: 0.3;
+            }
+
+            .title {
+                text-align: right;
+                color: $primaryTextColor;
+                font-weight: 600;
+                margin: 0 0 15px 0;
+            }
+
+            .number {
+                text-align: right;
+                color: $statsNumberColor;
+                font-size: 36px;
+                margin: 0;
+
+            }
+        }
+    }
+}

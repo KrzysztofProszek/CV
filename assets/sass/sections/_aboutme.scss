@@ -1,0 +1,46 @@
+.aboutMe {
+    .person {
+        display: flex;
+        align-items: center;
+
+        .personInfo {
+            width: 50%;
+            padding: 0 50px;
+
+            h4 {
+                margin: 0 0 15px 0;
+                color: $headerSecondaryTextColor;
+                font-weight: 300;
+            }
+
+            h2 {
+                margin: 0 0 30px 0;
+                color: $primaryTextColor;
+                @include fluid-type(320px, 1290px, 30px, 46px);
+
+
+            }
+
+            p {
+                line-height: 1.5;
+                color: $secondaryTextColor;
+                margin: 0 0 15px 0;
+            }
+
+        }
+
+        .personPhoto {
+            width: 50%;
+            align-self: flex-start;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 50% 0% 50% 50%;
+                translate: 40px -30px;
+
+            }
+        }
+    }
+}
