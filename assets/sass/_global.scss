@@ -164,6 +164,11 @@ body {
             width: 100%;
             background-color: $defaultSectiongBgColor;
             overflow: auto;
+            display: none;
+
+            &.active {
+                display: block;
+            }
 
 
         }

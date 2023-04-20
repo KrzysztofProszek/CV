@@ -422,6 +422,10 @@ body {
   width: 100%;
   background-color: #fff;
   overflow: auto;
+  display: none;
+}
+.page .content .section.active {
+  display: block;
 }
 
 .statsBanner {
@@ -615,6 +619,9 @@ body {
 }
 .side-menu a {
   color: #555;
+}
+.side-menu a.active {
+  color: rgb(255, 0, 0);
 }
 
 .navigation-arrow {

@@ -12,6 +12,10 @@
     font-size: 27px;
 
     a {
-        color: $secondaryTextColor
+        color: $secondaryTextColor;
+
+        &.active {
+            color: $activeMenuIcon
+        }
     }
 }
