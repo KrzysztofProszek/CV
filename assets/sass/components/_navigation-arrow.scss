@@ -1,0 +1,16 @@
+.navigation-arrow {
+    position: absolute;
+    width: 70px;
+    inset: auto -70px 0 auto;
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    align-items: center;
+    font-size: 27px;
+    flex-direction: column;
+    z-index: 2;
+
+    a {
+        color: $secondaryTextColor;
+    }
+}

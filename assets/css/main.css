@@ -273,12 +273,12 @@ summary {
 /* Firefox */
 * {
   scrollbar-width: auto;
-  scrollbar-color: #ffffff #d4d4d4;
+  scrollbar-color: #000000 #d4d4d4;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 4px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-track {
@@ -286,7 +286,7 @@ summary {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 10px;
   border: 3px solid #ffffff;
 }
@@ -317,6 +317,12 @@ body {
   width: 100%;
   max-width: 1660px;
   margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 1025px) {
+  .page {
+    padding: 0;
+  }
 }
 .page .header {
   width: 25%;
@@ -395,10 +401,20 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
+@media (max-width: 1025px) {
+  .page .header {
+    display: none;
+  }
+}
 .page .content {
   width: 75%;
   height: 100%;
   position: relative;
+}
+@media (max-width: 1025px) {
+  .page .content {
+    width: 100%;
+  }
 }
 .page .content .section {
   position: absolute;
@@ -575,4 +591,51 @@ body {
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   border: 2px solid #56b887;
+}
+
+.side-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 70px;
+  height: 100%;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  inset: 0 -70px auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  font-size: 27px;
+}
+.side-menu a {
+  color: #555;
+}
+
+.navigation-arrow {
+  position: absolute;
+  width: 70px;
+  inset: auto -70px 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 27px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+}
+.navigation-arrow a {
+  color: #555;
 }

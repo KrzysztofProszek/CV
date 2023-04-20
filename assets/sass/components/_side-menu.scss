@@ -1,0 +1,17 @@
+.side-menu {
+    display: flex;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    inset: 0 -70px auto auto;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    font-size: 27px;
+
+    a {
+        color: $secondaryTextColor
+    }
+}

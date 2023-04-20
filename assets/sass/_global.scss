@@ -2,12 +2,12 @@
 /* Firefox */
 * {
     scrollbar-width: auto;
-    scrollbar-color: #ffffff #d4d4d4;
+    scrollbar-color: #000000 #d4d4d4;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
 }
 
 *::-webkit-scrollbar-track {
@@ -15,7 +15,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 10px;
     border: 3px solid #ffffff;
 }
@@ -46,6 +46,11 @@ body {
     width: 100%;
     max-width: 1660px;
     margin: 0 auto;
+    position: relative;
+
+    @include forTablet {
+        padding: 0;
+    }
 
     .header {
         width: 25%;
@@ -138,12 +143,20 @@ body {
                 font-weight: 300;
             }
         }
+
+        @include forTablet {
+            display: none;
+        }
     }
 
     .content {
         width: 75%;
         height: 100%;
         position: relative;
+
+        @include forTablet {
+            width: 100%;
+        }
 
         .section {
             position: absolute;
